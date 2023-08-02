@@ -4,12 +4,53 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/main.css" />
+        <link rel="icon" type="jpg/png" href="./images/rock.png" />
         <script src="./javascript/app.js" defer></script>
         <title>Rock Paper Scissor | Lu-Marq</title>
     </head>
     <body>
         <main>
             <h1>Rock Paper Scissor</h1>
+
+            <p class="result">&nbsp;</p>
+            <p class="description">first to score 5 wins the game</p>
+
+            <div class="scores">
+                <div class="score user active">
+                    <h2 class="userSocre">?</h2>
+                    <img src="./images/rock.png" alt="Rock hand gesture" />
+
+                    <p>user: 0</p>
+                </div>
+
+                <div class="score computer active">
+                    <h2 class="computerScore">?</h2>
+                    <img src="./images/rock.png" alt="Rock hand gesture" />
+
+                    <p>pc: 0</p>
+                </div>
+            </div>
+
+            <div class="rock-paper-scissors-images">
+                <button type="button" data-selection="rock" class="rock">
+                    <img src="./images/rock.png" alt="Rock hand gesture" />
+                </button>
+
+                <button type="button" data-selection="paper" class="paper">
+                    <img src="./images/paper.png" alt="Paper hand gesture" />
+                </button>
+
+                <button
+                    type="button"
+                    data-selection="scissors"
+                    class="scissors"
+                >
+                    <img
+                        src="./images/scissors.png"
+                        alt="Scissors hand gesture"
+                    />
+                </button>
+            </div>
         </main>
     </body>
 </html>

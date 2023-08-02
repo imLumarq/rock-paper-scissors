@@ -24,12 +24,12 @@ html {
 
 img {
     max-width: 250px;
-    width: 100%;
 }
 
 button {
     background: none;
     outline: none;
+    cursor: pointer;
 }
 
 html,
@@ -40,7 +40,7 @@ main {
 }
 
 body {
-    backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(4px);
     background-image: url(../images/background-image.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -73,7 +73,6 @@ h1 {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    width: 100%;
 }
 
 .score {
@@ -81,8 +80,9 @@ h1 {
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: center;
+    min-width: 200px;
 }
 
 .score h2 {
@@ -101,7 +101,7 @@ h1 {
 }
 
 .score.active img {
-    display: none;
+    display: block;
 }
 
 .score p {
@@ -120,9 +120,7 @@ h1 {
     justify-content: center;
 }
 
-.rock,
-.paper,
-.scissors {
+.selection-button {
     align-items: center;
     backdrop-filter: blur(10px);
     border-radius: 2rem;
@@ -131,6 +129,5 @@ h1 {
     display: flex;
     flex: 1;
     justify-content: center;
-    max-width: 250px;
     padding: 1rem;
 }

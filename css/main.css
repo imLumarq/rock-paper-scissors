@@ -85,37 +85,31 @@ h1 {
     justify-content: center;
 }
 
-.user h2,
-.computer h2 {
+.score h2 {
     display: block;
     font-size: 50px;
 }
 
-.user.active h2,
-.computer.active h2 {
-    display: block;
+.score.active h2 {
+    display: none;
 }
 
-.user img,
-.computer img {
+.score img {
     display: none;
     flex: 1;
     max-width: 220px;
 }
 
-.user.active img,
-.computer.active img {
+.score.active img {
     display: none;
 }
 
-.user p,
-.computer p {
+.score p {
     margin-top: 1.5rem;
     text-transform: uppercase;
 }
 
-.user.active p,
-.computer.active p {
+.score.active p {
     margin-top: 0;
 }
 

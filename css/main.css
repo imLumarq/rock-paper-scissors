@@ -3,26 +3,140 @@
     src: url(../webfont/pixopedia.ttf);
 }
 
+:root {
+    --font-family: "Pixel", sans-serif;
+    --font-size: 1.35rem;
+    --text-color: hsl(0, 0, 100%);
+}
+
 *,
 *::before,
 *::after {
+    box-sizing: border-box;
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
     color-scheme: dark;
 }
 
+img {
+    max-width: 250px;
+    width: 100%;
+}
+
+button {
+    background: none;
+    outline: none;
+}
+
 html,
-body {
-    min-height: 100vh;
+body,
+main {
     min-height: 100dvh;
+    min-height: 100vh;
 }
 
 body {
+    backdrop-filter: blur(2.5px);
     background-image: url(../images/background-image.jpg);
-    color: white;
-    font-family: "Pixel", sans-serif;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--text-color);
+    font-size: var(--font-size);
+    text-align: center;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.result,
+.description {
+    text-transform: uppercase;
+}
+
+.scores {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.score {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.user h2,
+.computer h2 {
+    display: block;
+    font-size: 50px;
+}
+
+.user.active h2,
+.computer.active h2 {
+    display: block;
+}
+
+.user img,
+.computer img {
+    display: none;
+    flex: 1;
+    max-width: 220px;
+}
+
+.user.active img,
+.computer.active img {
+    display: none;
+}
+
+.user p,
+.computer p {
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+}
+
+.user.active p,
+.computer.active p {
+    margin-top: 0;
+}
+
+.rock-paper-scissors-images {
+    align-items: center;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.rock,
+.paper,
+.scissors {
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    border: 2px solid rgba(100, 100, 100, 0.5);
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.8);
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    max-width: 250px;
+    padding: 1rem;
 }

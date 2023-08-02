@@ -19,39 +19,50 @@
                 <div class="score">
                     <h2>?</h2>
                     <img
-                        class="user-selection"
+                        id="user-selection"
                         src="./images/rock.png"
                         alt="Rock hand gesture"
                     />
 
-                    <p class="user-score">user: 0</p>
+                    <p>user: <span class="user-score">0</span></p>
                 </div>
 
                 <div class="score">
                     <h2>?</h2>
                     <img
-                        class="computer-selection"
+                        id="computer-selection"
                         src="./images/rock.png"
                         alt="Rock hand gesture"
                     />
 
-                    <p class="computer-score">pc: 0</p>
+                    <p>pc: <span class="computer-score">0</span></p>
                 </div>
             </div>
 
             <div class="rock-paper-scissors-images">
-                <button type="button" data-selection="rock" class="rock">
+                <button
+                    id="rock-btn"
+                    class="selection-button rock"
+                    type="button"
+                    data-decision="rock"
+                >
                     <img src="./images/rock.png" alt="Rock hand gesture" />
                 </button>
 
-                <button type="button" data-selection="paper" class="paper">
+                <button
+                    id="paper-btn"
+                    class="selection-button paper"
+                    type="button"
+                    data-decision="paper"
+                >
                     <img src="./images/paper.png" alt="Paper hand gesture" />
                 </button>
 
                 <button
+                    id="scissors-btn"
+                    class="selection-button scissors"
                     type="button"
-                    data-selection="scissors"
-                    class="scissors"
+                    data-decision="scissors"
                 >
                     <img
                         src="./images/scissors.png"

@@ -52,6 +52,22 @@ function InitiateGame() {
     scissorsButton.disables = false;
 }
 
+window.addEventListener("keydown", (e) => {
+    switch (e.keyCode) {
+        case 82:
+            RunSteps(rockButton);
+            break;
+
+        case 80:
+            RunSteps(paperButton);
+            break;
+
+        case 83:
+            RunSteps(scissorsButton);
+            break;
+    }
+});
+
 rockButton.addEventListener("click", () => {
     RunSteps(rockButton);
 });

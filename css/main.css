@@ -159,7 +159,6 @@ Reset Game
     flex-direction: column;
     justify-content: center;
     padding: 2rem 1rem;
-    padding: 5rem;
     width: 90%;
 }
 
@@ -172,7 +171,11 @@ Reset Game
     letter-spacing: 5px;
 }
 
-.reset h3 span {
+.reset h3 span.resize {
+    word-break: break-word;
+}
+
+.reset h3 span.animate {
     animation: flashing 1s ease infinite;
 }
 

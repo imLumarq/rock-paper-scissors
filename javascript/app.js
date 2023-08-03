@@ -3,6 +3,8 @@ const paper = "paper";
 const scissors = "scissors";
 const options = [rock, paper, scissors];
 
+const container = document.querySelector(".container");
+
 const result = document.querySelector(".result");
 const description = document.querySelector(".description");
 
@@ -14,13 +16,41 @@ const computerImage = document.getElementById("computer-selection");
 const userScore = document.querySelector(".user-score");
 const computerScore = document.querySelector(".computer-score");
 
-let rockButton = document.getElementById("rock-btn");
-let paperButton = document.getElementById("paper-btn");
-let scissorsButton = document.getElementById("scissors-btn");
+const rockButton = document.getElementById("rock-btn");
+const paperButton = document.getElementById("paper-btn");
+const scissorsButton = document.getElementById("scissors-btn");
 
-let computerSelection;
+const reset = document.querySelector(".reset");
+const resetHeading = document.querySelector(".reset-heading");
+const closeButton = document.getElementById("close-button");
+const audio = document.querySelector("audio");
+
+let computerSelection = "";
 let userCounter = 0,
     computerCounter = 0;
+
+function InitiateGame() {
+    computerSelection = "";
+    userCounter = 0;
+    computerCounter = 0;
+
+    container.classList.add("active");
+    reset.classList.remove("active");
+
+    result.textContent = "";
+    description.textContent = "first to score 5 wins the game";
+
+    scores.forEach((score) => {
+        score.classList.remove("active");
+    });
+
+    userScore.textContent = "0";
+    computerScore.textContent = "0";
+
+    rockButton.disables = false;
+    paperButton.disables = false;
+    scissorsButton.disables = false;
+}
 
 rockButton.addEventListener("click", () => {
     RunSteps(rockButton);
@@ -35,23 +65,20 @@ scissorsButton.addEventListener("click", () => {
 });
 
 function RunSteps(userSelection) {
-    if (userCounter === 5 || computerCounter === 5) {
-        EndGame();
-    } else {
-        computerSelection = GetComputerChoice(options);
-        PlayRound(userSelection.dataset.decision, computerSelection);
+    computerSelection = GetComputerChoice(options);
+    PlayRound(userSelection.dataset.decision, computerSelection);
 
-        scores.forEach((score) => {
-            if (score.classList.contains("active")) return;
-            score.classList.add("active");
-        });
+    scores.forEach((score) => {
+        if (score.classList.contains("active")) return;
+        score.classList.add("active");
+    });
 
-        GetUserImage(userSelection.dataset.decision);
-        GetComputerImage(computerSelection);
+    GetUserImage(userSelection.dataset.decision);
+    GetComputerImage(computerSelection);
 
-        userScore.textContent = userCounter;
-        computerScore.textContent = computerCounter;
-    }
+    userScore.textContent = userCounter;
+    computerScore.textContent = computerCounter;
+    CheckWinner();
 }
 
 function GetComputerChoice(options) {
@@ -109,6 +136,7 @@ function PlayRound(user, computer) {
         description.textContent = `${user} is equal to ${computer}`;
     }
 }
+
 function GetUserImage(userSelection) {
     switch (userSelection) {
         case "rock":
@@ -148,6 +176,32 @@ function GetComputerImage(computerSelection) {
     }
 }
 
+function CheckWinner() {
+    console.log("yes");
+    if (userCounter === 5 || computerCounter === 5) {
+        rockButton.disables = true;
+        paperButton.disables = true;
+        scissorsButton.disables = true;
+        EndGame();
+    }
+}
+
 function EndGame() {
-    console.log("thank you for playing");
+    container.classList.toggle("active");
+    reset.classList.toggle("active");
+
+    if (userCounter > computerCounter) {
+        resetHeading.textContent = "CONGRATULATIONS!! YOU'VE WON";
+        audio.src = "../audio/you-win.mp3";
+        audio.play();
+    } else {
+        resetHeading.textContent =
+            "COMPUTER HAS WON THE BATTLE BUT NOT THE WAR!!";
+        audio.src = "../audio/you-lose.mp3";
+        audio.play();
+    }
+
+    closeButton.addEventListener("click", () => {
+        InitiateGame();
+    });
 }

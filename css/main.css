@@ -62,11 +62,11 @@ main {
 }
 
 .container {
-    padding: 2rem 1rem;
     align-items: center;
     display: none;
     flex-direction: column;
     justify-content: space-between;
+    padding: 2rem 1rem;
 }
 
 .container.active {
@@ -149,22 +149,44 @@ h1 {
 Reset Game
 **********************/
 .reset {
+    align-items: center;
     backdrop-filter: blur(10px);
     border-radius: 2rem;
     border: 2px solid rgba(100, 100, 100, 0.5);
     box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.8);
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
     padding: 5rem;
-    width: 50%;
+    width: 90%;
 }
 
 .reset.active {
-    display: block;
+    display: flex;
 }
 
 .reset h3 {
     font-size: xx-large;
     letter-spacing: 5px;
+}
+
+.reset h3 span {
+    animation: flashing 1s ease infinite;
+}
+
+@keyframes flashing {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: yellow;
+    }
+
+    100% {
+        color: white;
+    }
 }
 
 .reset button {

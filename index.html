@@ -10,65 +10,70 @@
     </head>
     <body>
         <main>
-            <h1>Rock Paper Scissor</h1>
+            <div class="container">
+                <h1>Rock Paper Scissor</h1>
 
-            <p class="result">&nbsp;</p>
-            <p class="description">first to score 5 wins the game</p>
+                <p class="result">&nbsp;</p>
+                <p class="description">first to score 5 wins the game</p>
 
-            <div class="scores">
-                <div class="score">
-                    <h2>?</h2>
-                    <img
-                        id="user-selection"
-                        src="./images/rock.png"
-                        alt="Rock hand gesture"
-                    />
+                <div class="scores">
+                    <div class="score">
+                        <h2>?</h2>
+                        <img
+                            id="user-selection"
+                            src="./images/rock.png"
+                            alt="Rock hand gesture"
+                        />
 
-                    <p>user: <span class="user-score">0</span></p>
+                        <p>user: <span class="user-score">0</span></p>
+                    </div>
+
+                    <div class="score">
+                        <h2>?</h2>
+                        <img
+                            id="computer-selection"
+                            src="./images/rock.png"
+                            alt="Rock hand gesture"
+                        />
+
+                        <p>pc: <span class="computer-score">0</span></p>
+                    </div>
                 </div>
 
-                <div class="score">
-                    <h2>?</h2>
-                    <img
-                        id="computer-selection"
-                        src="./images/rock.png"
-                        alt="Rock hand gesture"
-                    />
+                <div class="rock-paper-scissors-images">
+                    <button
+                        id="rock-btn"
+                        class="selection-button rock"
+                        type="button"
+                        data-decision="rock"
+                    >
+                        <img src="./images/rock.png" alt="Rock hand gesture" />
+                    </button>
 
-                    <p>pc: <span class="computer-score">0</span></p>
+                    <button
+                        id="paper-btn"
+                        class="selection-button paper"
+                        type="button"
+                        data-decision="paper"
+                    >
+                        <img
+                            src="./images/paper.png"
+                            alt="Paper hand gesture"
+                        />
+                    </button>
+
+                    <button
+                        id="scissors-btn"
+                        class="selection-button scissors"
+                        type="button"
+                        data-decision="scissors"
+                    >
+                        <img
+                            src="./images/scissors.png"
+                            alt="Scissors hand gesture"
+                        />
+                    </button>
                 </div>
-            </div>
-
-            <div class="rock-paper-scissors-images">
-                <button
-                    id="rock-btn"
-                    class="selection-button rock"
-                    type="button"
-                    data-decision="rock"
-                >
-                    <img src="./images/rock.png" alt="Rock hand gesture" />
-                </button>
-
-                <button
-                    id="paper-btn"
-                    class="selection-button paper"
-                    type="button"
-                    data-decision="paper"
-                >
-                    <img src="./images/paper.png" alt="Paper hand gesture" />
-                </button>
-
-                <button
-                    id="scissors-btn"
-                    class="selection-button scissors"
-                    type="button"
-                    data-decision="scissors"
-                >
-                    <img
-                        src="./images/scissors.png"
-                        alt="Scissors hand gesture"
-                    />
-                </button>
             </div>
         </main>
     </body>

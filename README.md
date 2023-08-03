@@ -18,10 +18,10 @@ The classical Rock Paper Scissors game that we all grew up with. If I'm being co
 
 -  On desktop click the hand gesture with the mouse. Rock = <img src="./images/rock.png" max-width="40" max-height="40"> Paper = <img src="./images/paper.png" max-width="40" max-height="40"> Scissors = <img src="./images/scissors.png" max-width="40" max-height="40">
 -  OR
--  On desktop use the tab key to switch between options and enter to select an option. Rock = <img src="./images/rock.png" width="50" height="50"> Paper = <img src="./images/paper.png" max-width="40" maxheight="40"> Scissors = <img src="./images/scissors.png" width="50" height="50">
+-  On desktop use the tab key to switch between options and enter to select an option. Rock = <img src="./images/rock.png" max-width="40" max-height="40"> Paper = <img src="./images/paper.png" max-width="40" max-height="40"> Scissors = <img src="./images/scissors.png" max-width="40" max-height="40">
 -  OR
--  On desktop use the keyborder to selection an option. R / r = <img src="./images/rock.png" width="50" height="50">P / p = <img src="./images/paper.png" max-width="40" max-height="40"> S / s = <img src="./images/scissors.png" width="50" height="50">
--  On mobile just click the button that represents the option you want to select. Rock = <img src="./images/rock.png" width="50" height="50"> Paper = <img src="./images/paper.png" max-width="30" max-height="30"> Scissors = <img src="./images/scissors.png" width="50" height="50">
+-  On desktop use the keyborder to selection an option. R / r = <img src="./images/rock.png" max-width="40" max-height="40">P / p = <img src="./images/paper.png" max-width="40" max-height="40"> S / s = <img src="./images/scissors.png" max-width="40" max-height="40">
+-  On mobile just click the button that represents the option you want to select. Rock = <img src="./images/rock.png" max-width="40" max-height="40"> Paper = <img src="./images/paper.png" max-width="40" max-height="40"> Scissors = <img src="./images/scissors.png" max-width="40" max-height="40">
 
 ## Links
 

@@ -50,21 +50,37 @@ function InitiateGame() {
     rockButton.disables = false;
     paperButton.disables = false;
     scissorsButton.disables = false;
+    switch (window.event.key) {
+        case "r":
+        case "p":
+        case "s":
+            return true;
+    }
 }
 
-window.addEventListener("keydown", (e) => {
-    switch (e.keyCode) {
-        case 82:
-            RunSteps(rockButton);
-            break;
+document.addEventListener("keydown", (e) => {
+    if (userCounter === 5 || computerCounter === 5) {
+        switch (e.key) {
+            case "r":
+            case "p":
+            case "s":
+                e.preventDefault();
+                return false;
+        }
+    } else {
+        switch (e.keyCode) {
+            case 82:
+                RunSteps(rockButton);
+                break;
 
-        case 80:
-            RunSteps(paperButton);
-            break;
+            case 80:
+                RunSteps(paperButton);
+                break;
 
-        case 83:
-            RunSteps(scissorsButton);
-            break;
+            case 83:
+                RunSteps(scissorsButton);
+                break;
+        }
     }
 });
 
@@ -198,6 +214,7 @@ function CheckWinner() {
         rockButton.disables = true;
         paperButton.disables = true;
         scissorsButton.disables = true;
+
         EndGame();
     }
 }
@@ -205,14 +222,21 @@ function CheckWinner() {
 function EndGame() {
     container.classList.toggle("active");
     reset.classList.toggle("active");
+    const span = document.createElement("span");
 
     if (userCounter > computerCounter) {
-        resetHeading.textContent = "CONGRATULATIONS!! YOU'VE WON";
+        span.textContent = "YOU WERE VICTORIOUS";
+        resetHeading.textContent = "CONGRATULATIONS!! ";
+        resetHeading.appendChild(span);
+
         audio.src = "../audio/you-win.mp3";
         audio.play();
     } else {
+        span.textContent = "TRY AGAIN";
         resetHeading.textContent =
-            "COMPUTER HAS WON THE BATTLE BUT NOT THE WAR!!";
+            "COMPUTER HAS WON THE BATTLE BUT NOT THE WAR!! ";
+        resetHeading.appendChild(span);
+
         audio.src = "../audio/you-lose.mp3";
         audio.play();
     }

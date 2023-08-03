@@ -21,6 +21,7 @@ const paperButton = document.getElementById("paper-btn");
 const scissorsButton = document.getElementById("scissors-btn");
 
 const reset = document.querySelector(".reset");
+const resetScore = document.querySelector(".reset-score");
 const resetHeading = document.querySelector(".reset-heading");
 const closeButton = document.getElementById("close-button");
 const audio = document.querySelector("audio");
@@ -222,20 +223,30 @@ function CheckWinner() {
 function EndGame() {
     container.classList.toggle("active");
     reset.classList.toggle("active");
+    const winLose = document.createElement("span");
     const span = document.createElement("span");
 
+    span.classList.add("animate");
+
+    resetScore.textContent = `${userCounter} - ${computerCounter}`;
+
     if (userCounter > computerCounter) {
+        winLose.textContent = "CONGRATULATIONS!! ";
         span.textContent = "YOU WERE VICTORIOUS";
-        resetHeading.textContent = "CONGRATULATIONS!! ";
-        resetHeading.appendChild(span);
+
+        winLose.classList.add("resize");
+
+        resetHeading.textContent = "";
+        resetHeading.append(winLose, span);
 
         audio.src = "../audio/you-win.mp3";
         audio.play();
     } else {
+        winLose.textContent = "COMPUTER HAS WON THE BATTLE BUT NOT THE WAR!! ";
         span.textContent = "TRY AGAIN";
-        resetHeading.textContent =
-            "COMPUTER HAS WON THE BATTLE BUT NOT THE WAR!! ";
-        resetHeading.appendChild(span);
+
+        resetHeading.textContent = "";
+        resetHeading.append(winLose, span);
 
         audio.src = "../audio/you-lose.mp3";
         audio.play();

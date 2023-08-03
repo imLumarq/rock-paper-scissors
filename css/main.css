@@ -5,7 +5,7 @@
 
 :root {
     --font-family: "Pixel", sans-serif;
-    --font-size: 1.35rem;
+    --font-size: 1.30rem;
     --text-color: hsl(0, 0, 100%);
 }
 
@@ -23,7 +23,8 @@ html {
 }
 
 img {
-    max-width: 250px;
+    max-width: 225px;
+    width: 100%;
 }
 
 button {
@@ -47,6 +48,8 @@ body {
     background-size: cover;
     color: var(--text-color);
     font-size: var(--font-size);
+    line-height: 1.5;
+    overflow-x: hidden;
     text-align: center;
 }
 
@@ -80,9 +83,9 @@ h1 {
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 2rem;
+    gap: 1.5rem;
+    min-width: 150px;
     justify-content: center;
-    min-width: 200px;
 }
 
 .score h2 {
@@ -96,8 +99,6 @@ h1 {
 
 .score img {
     display: none;
-    flex: 1;
-    max-width: 220px;
 }
 
 .score.active img {
@@ -105,7 +106,7 @@ h1 {
 }
 
 .score p {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     text-transform: uppercase;
 }
 
@@ -129,5 +130,5 @@ h1 {
     display: flex;
     flex: 1;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.5rem;
 }

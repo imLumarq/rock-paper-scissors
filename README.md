@@ -6,7 +6,7 @@ The classical Rock Paper Scissors game that we all grew up with. If I'm being co
 
 -   [Things you should Know](#thinks-you-should-know)
 -   [How to play](#how-to-play)
--   [Links](#links)
+-   [Links](#Links)
 -   [Author](#author)
   
 ## Things You Should Know
@@ -25,7 +25,7 @@ The classical Rock Paper Scissors game that we all grew up with. If I'm being co
 
 ## Links
 
--   Live Site URL: (https://imlumarq-rockpaperscirssors)
+-   Live Site URL: (https://imlumarq-rockpaperscirssors.pages.dev)
 -   Github Repository: (https://github.com/imLumarq/rock-paper-scissors)
 
 ## Author

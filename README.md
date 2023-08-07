@@ -25,7 +25,7 @@ The classical Rock Paper Scissors game that we all grew up with. If I'm being co
 
 ## Links
 
--   Live Site URL: (https://imlumarq-rockpaperscirssors.pages.dev)
+-   Live Site URL: (https://imlumarq-rockpaperscissors.pages.dev/)
 -   Github Repository: (https://github.com/imLumarq/rock-paper-scissors)
 
 ## Author
